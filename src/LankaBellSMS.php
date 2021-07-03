@@ -2,6 +2,7 @@
 
 namespace AppsDept\LaravelLankaBellSMS;
 
+use Exception;
 use Illuminate\Support\Facades\Http;
 
 class LankaBellSMS
@@ -10,6 +11,9 @@ class LankaBellSMS
 
     public static function TwoFactorAuth($number)
     {
+        if (\gettype($number) != 'string') throw new Exception('Phone number should be a string');
+        if (\strlen($number) < 9)  throw new Exception('Minimum destination number lenth is 9.');
+
         $LB_KEY = config('lankabell.LB_Key');
         $TwoAuthCode = rand(100000, 999999);
 
