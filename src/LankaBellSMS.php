@@ -15,11 +15,13 @@ class LankaBellSMS
         if (\strlen($number) < 9)  throw new Exception('Minimum destination number lenth is 9.');
 
         $LB_KEY = config('lankabell.LB_Key');
+        $LB_PORT = config('lankabell.LB_Port');
+
         $TwoAuthCode = rand(100000, 999999);
 
         $response =  Http::withHeaders([
             'Authorization' => $LB_KEY,
-        ])->get('http://smsm.lankabell.com:4090/Sms.svc/SecureSendSms', [
+        ])->get("http://smsm.lankabell.com:{$LB_PORT}/Sms.svc/SecureSendSms", [
             'phoneNumber' => $number,
             'smsMessage' => "Your verification code is {$TwoAuthCode}"
         ]);
@@ -32,6 +34,5 @@ class LankaBellSMS
 
         if ($status == "200") return $TwoAuthCode;
         throw new Exception($response);
-
     }
 }

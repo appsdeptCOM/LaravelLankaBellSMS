@@ -12,5 +12,6 @@ return [
     |
     */
 
-    'LB_Key' => env('LB_Secure_Key', null),
+    'LB_Key' => env('LB_SECURE_KEY', null),
+    'LB_Port' => env('LB_API_PORT', null),
 ];
