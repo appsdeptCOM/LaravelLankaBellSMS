@@ -1,0 +1,14 @@
+{
+    "name": "appsdept/lankabell-sms",
+    "description": "A simple package to connect LankaBell SMS Api, with 2factor Authentication",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "LasanthaSudeera",
+            "email": "lasan.sudeera@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
