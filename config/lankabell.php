@@ -8,7 +8,7 @@ return [
     |--------------------------------------------------------------------------
     |
     | You can generate your Secure Key by visiting http://smsm.lankabell.com/API/WebApiKey.aspx
-    | User the details received by the initial email from Lankabell
+    | Use the details received by the initial email from Lankabell
     |
     */
 

@@ -26,5 +26,7 @@ class LankaBellSMS
 
 
         if ($status == "200") return $TwoAuthCode;
+
+        return $response;
     }
 }
