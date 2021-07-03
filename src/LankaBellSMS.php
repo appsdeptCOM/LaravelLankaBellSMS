@@ -30,8 +30,6 @@ class LankaBellSMS
         if ($status == "412" || $status == "410") throw new Exception('Invalid LankaBell LB Secure Key!');
         if ($status == "601") throw new Exception('Minimum destination number length is 9.');
 
-
-
         if ($status == "200") return $TwoAuthCode;
         throw new Exception($response);
     }
