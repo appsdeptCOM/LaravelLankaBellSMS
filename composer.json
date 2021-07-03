@@ -10,5 +10,22 @@
         }
     ],
     "minimum-stability": "dev",
-    "require": {}
+    "require": {},
+
+    "autoload": {
+        "psr-4": {
+            "AppsDept\\LaravelLankaBellSMS\\": "src/"
+        }
+    },
+
+    "extra": {
+        "laravel": {
+            "providers": [
+                "AppsDept\\LaravelLankaBellSMS\\LankaBellSMS"
+            ],
+            "aliases": {
+                "Calculator": "AppsDept\\LaravelLankaBellSMS\\Facades\\LankaBellSMS"
+            }
+        }
+    }
 }
