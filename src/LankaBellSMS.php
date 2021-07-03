@@ -11,7 +11,7 @@ class LankaBellSMS
 
     public static function TwoFactorAuth($number)
     {
-        if (\gettype($number) != 'string') throw new Exception('Phone number should be a string');
+        if (\gettype($number) != 'string') throw new Exception('Phone number should be a string!');
         if (\strlen($number) < 9)  throw new Exception('Minimum destination number lenth is 9.');
 
         $LB_KEY = config('lankabell.LB_Key');
@@ -25,12 +25,13 @@ class LankaBellSMS
         ]);
 
         $status =  $response->json()['Status'];
-        if ($status == "412" || $status == "410") return "Invalid LB Secure Key";
-        if ($status == "601") return "Minimum destination number lenth is 9.";
+        if ($status == "412" || $status == "410") throw new Exception('Invalid LankaBell LB Secure Key!');
+        if ($status == "601") throw new Exception('Minimum destination number lenth is 9.');
+
 
 
         if ($status == "200") return $TwoAuthCode;
+        throw new Exception($response);
 
-        return $response;
     }
 }
