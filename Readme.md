@@ -16,6 +16,16 @@ php artisan migrate
 
 ## Usage
 
+### Environment Setup
+
+Generate your LB_Key from your dashboard.
+
+Add the following inside your .env
+
+LB_SECURE_KEY="LB_Key750 YouKeyGoesHere="
+LB_API_PORT=4090
+
+
 ### 2Factor Auth
 This will Text a Random code and returns the generated code.
 
