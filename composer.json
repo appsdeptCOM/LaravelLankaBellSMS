@@ -19,7 +19,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "AppsDept\\LaravelLankaBellSMS\\LankaBellSMS"
+                "AppsDept\\LaravelLankaBellSMS\\LankaBellServiceProvider"
             ],
             "aliases": {
                 "LankaBellSMS": "AppsDept\\LaravelLankaBellSMS\\Facades\\LankaBellSMS"
