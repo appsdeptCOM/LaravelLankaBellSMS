@@ -28,3 +28,5 @@ LankaBellSMS::SendText('071XXXXXXX', 'Message that need to be sent');
 The Send messages will be stored in the databases.
 
 
+## Contact Us
+www.appsdept.com
