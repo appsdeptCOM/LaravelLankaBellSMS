@@ -23,6 +23,7 @@ Generate your LB_Key from your dashboard.
 Add the following inside your .env
 
 LB_SECURE_KEY="LB_Key750 YouKeyGoesHere="
+
 LB_API_PORT=4090
 
 
@@ -30,6 +31,7 @@ LB_API_PORT=4090
 This will Text a Random code and returns the generated code.
 
 $code = LankaBellSMS::TwoFactorAuth('071XXXXXXX');
+
 return $code;
 
 ### Send a SMS to a Number
