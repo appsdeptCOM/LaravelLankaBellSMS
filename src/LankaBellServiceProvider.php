@@ -9,9 +9,12 @@ class LankaBellServiceProvider extends ServiceProvider
 
     public function boot()
     {
+        $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
+
         $this->publishes([
             __DIR__ . '/../config/lankabell.php' => config_path('lankabell.php'),
         ]);
+
     }
 
     public function register()

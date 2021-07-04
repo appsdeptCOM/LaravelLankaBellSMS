@@ -2,6 +2,7 @@
 
 namespace AppsDept\LaravelLankaBellSMS;
 
+use AppsDept\LaravelLankaBellSMS\Models\LankaBellOutBox;
 use Exception;
 use Illuminate\Support\Facades\Http;
 
@@ -26,6 +27,13 @@ class LankaBellSMS
         $status =  $response->json()['Status'];
         if ($status == "412" || $status == "410") throw new Exception('Invalid LankaBell LB Secure Key!');
         if ($status == "601") throw new Exception('Minimum destination number length is 9.');
+
+        LankaBellOutBox::create([
+            'status_code' => $status,
+            'message' => $message,
+            'number' => $number
+        ]);
+
 
         if ($status == "200") return true;
         throw new Exception($response);
