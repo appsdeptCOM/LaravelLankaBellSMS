@@ -26,7 +26,7 @@
                 "AppsDept\\LaravelLankaBellSMS\\LankaBellSMS"
             ],
             "aliases": {
-                "Calculator": "AppsDept\\LaravelLankaBellSMS\\Facades\\LankaBellSMS"
+                "LankaBellSMS": "AppsDept\\LaravelLankaBellSMS\\Facades\\LankaBellSMS"
             }
         }
     }
