@@ -8,6 +8,9 @@ Laravel LankaBell SMS Library is open-sourced software licensed under the [MIT l
 
 ## Installation
 
+### Require from composer
+composer require appsdept/lankabell-sms
+
 ### Publish the Provider
 php artisan vendor:publish --provider="AppsDept\LaravelLankaBellSMS\LankaBellServiceProvider"
 
